@@ -1,23 +1,17 @@
 import { useState } from 'react'
-import './App.css'
-import AllRoutes from './Routes/AllRoutes'
-import Navbar from './components/Layout/Navbar'
 
+import './index.css'
+import MainRoutes from './Routes/MainRoutes'
+import Navbar from './Components/Navbar'
 
 function App() {
-  const [count, setCount] = useState(0)
-console.log("counts")
+  
+
   return (
-   <div>
-    
-      <div className="App">
-          <Navbar />
-          <div className="container mx-auto mt-8">
-          
-            <AllRoutes />
-          </div>
-          </div>
-   </div>
+    <>
+   <Navbar />
+   <MainRoutes />
+   </>
   )
 }
 
