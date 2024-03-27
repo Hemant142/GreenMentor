@@ -1,7 +1,7 @@
 import axios from "axios"
 import { Add_Task, Delete_Task, Edit_Task, Task_Failure, Task_Request, Task_Success } from "../actionTypes"
 
-const baseURL = "https://eager-red-chick.cyclic.app";
+const baseURL = "https://greenmentor-backend-ne67.onrender.com";
 
 export const getTasks = (token)=>async(dispatch)=>{
   try{

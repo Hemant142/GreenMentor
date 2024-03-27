@@ -18,6 +18,7 @@ const LoginPage = () => {
       }
       if(user && password){
         dispatch(login(user)).then((res)=>{
+          console.log(res,"login")
           if(res.message==="Login successful!"){
            
             alert(res.message)

@@ -20,6 +20,7 @@ const RegisterPage = () => {
        
         if(name && username && email && password){
             dispatch(register(user)).then((res)=>{
+              console.log(res,"register")
                 if(res.message==="User created successfully!"){
                     alert(res.message)
                     navigate('/login')

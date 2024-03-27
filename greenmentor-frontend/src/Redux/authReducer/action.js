@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Edit_Profile, Login_Failure, Login_Request, Login_Success, Logout_Success } from "../actionTypes";
 
-const baseURL = "https://eager-red-chick.cyclic.app";
+const baseURL = "https://greenmentor-backend-ne67.onrender.com";
 
 //Login
 export const login = (user)=> async (dispatch) => {
@@ -25,7 +25,9 @@ export const register = (user) => async(dispatch) =>{
     try{
         dispatch({type:Login_Request})
         try{
+          
             const res = await axios.post(`${baseURL}/users/register`,user)
+            console.log(res,"register")
             return res?.data;
         }
         catch (error) {
