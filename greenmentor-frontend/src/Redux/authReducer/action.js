@@ -25,7 +25,7 @@ export const register = (user) => async(dispatch) =>{
     try{
         dispatch({type:Login_Request})
         try{
-          
+          console.log(user,"user")
             const res = await axios.post(`${baseURL}/users/register`,user)
             console.log(res,"register")
             return res?.data;
