@@ -35,7 +35,7 @@ const RegisterPage = () => {
     }
   return (
     <div className="min-h-screen flex items-center justify-center">  
-      <div className="bg-custom-pink pt-6 pl-8 pr-8 pb-10 rounded-t-custom-border-radius shadow-md w-full sm:w-96">
+      <div className="bg-custom-pink pt-6 pl-8 pr-8 pb-10 rounded-custom-border-radius shadow-md w-full sm:w-96">
         <h2 className="text-2xl text-custom-green font-bold mb-8 ">Register</h2>
         <form onSubmit={(e)=>handleRegister(e)}>
         <div className="mb-4">
@@ -67,7 +67,7 @@ const RegisterPage = () => {
               id="username"
               name="username"
               className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-custom-green"
-              placeholder="Enter your username e.g. john123"
+              placeholder="Enter your username e.g. Dummy2.0"
               required
               onChange={(e)=>setUsername(e.target.value)}
             />
