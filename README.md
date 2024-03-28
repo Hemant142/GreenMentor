@@ -14,12 +14,12 @@ Empower your productivity with our intuitive task management app, facilitating s
 # Features offered
 - Signup functionality :
 
- 1. Users can signup on the website with their name, username, email and password.
+ 1. Users can sign up on the website with their name, username, email, and password.
 
 - SignIn functionality:
 
  1. Users that are already signed up can sign in with their emails and passwords.
- 2. Upon successful signin users are provided with jwt token for secure access.
+ 2. Upon successful sign-in users are provided with jwt token for secure access.
 
 - Logout functionality :
 
@@ -27,7 +27,7 @@ Empower your productivity with our intuitive task management app, facilitating s
 
 - Task Management:
 
- 1. Logged in users can successfully access their tasks-list.
+ 1. Logged-in users can successfully access their tasks-list.
  2. Create new tasks.
  3. Delete exsisting task.
  4. Update exsisting task.
@@ -83,7 +83,7 @@ run server
 ```
 npm run server
 ```
-- Note : For configuring backend use your own .env file with PORT, MongoUrl, saltrounds and SecretKey
+- Note : For configuring the backend use your .env file with PORT, MongoUrl, saltrounds, and SecretKey
 
 # ScreenShots
 
@@ -105,6 +105,6 @@ npm run server
 
 [![Register.png](https://i.postimg.cc/1zntNWLZ/Register.png)](https://postimg.cc/qtr0PGJm)
 
-## Profie Page
+## Profile Page
 
 [![Profile.png](https://i.postimg.cc/BbMszDdg/Profile.png)](https://postimg.cc/jnwGwWqw)
