@@ -26,6 +26,29 @@ export const getTasks = (token)=>async(dispatch)=>{
   }
 }
 
+
+export const getSingleTasks = (token, id) => async (dispatch) => {
+  try {
+    dispatch({ type: Task_Request });
+    try {
+      const res = await axios.get(`${baseURL}/tasks/get/${id}`, {
+        headers: {
+          Authorization: token,
+        },
+      });
+
+      console.log(res.data,"Single data");
+
+      // dispatch({ type: Task_Success, payload: res.data });
+    } catch (error) {
+      dispatch({ type: Task_Failure });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
 export const adaddTask = (task,token)=>async(dispatch)=>{
     try{
         dispatch({type:Task_Request})

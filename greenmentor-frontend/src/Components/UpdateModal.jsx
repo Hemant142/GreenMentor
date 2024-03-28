@@ -1,12 +1,13 @@
 import axios from 'axios';
-import React, { useState } from 'react';
-import { editTask } from '../Redux/taskReducer/action';
+import React, { useEffect, useState } from 'react';
+import { editTask, getSingleTasks } from '../Redux/taskReducer/action';
 import { useDispatch } from 'react-redux';
 
 const UpdateModal = ({ open, close,token, id }) => {
     const [title,setTitle]= useState("")
     const [description,setDesc]= useState("")
     const dispatch = useDispatch()
+    console.log(id,"UPDATE")
     const handleEdit = async(e)=>{
         e.preventDefault()
         let newtask = {
@@ -23,6 +24,11 @@ const UpdateModal = ({ open, close,token, id }) => {
             alert("Input Fields are required!")
           }
     }
+
+    // useEffect(() => {
+    //   // Fetch task details when component mounts
+    //   // dispatch(getSingleTasks(token, id))
+    // }, [dispatch, token, id]);
   return (
     open && (
       <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-300 bg-opacity-75">

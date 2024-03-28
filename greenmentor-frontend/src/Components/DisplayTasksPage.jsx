@@ -11,7 +11,7 @@ const DisplayTasksPage = () => {
   const isLoading = useSelector((store)=>store.taskReducer.isLoading)
   const isError = useSelector((store)=>store.taskReducer.isError)
   
-  
+  console.log("DisplayTaskPaeg")
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isupdate,setIsupdate] = useState(false)
   const [id,setId] = useState("")
@@ -89,8 +89,6 @@ useEffect(()=>{
       </div>
       ))
      }
-     
-    
      </>
   )
 }
