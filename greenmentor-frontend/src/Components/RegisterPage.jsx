@@ -34,6 +34,7 @@ const RegisterPage = () => {
         }
     }
   return (
+    
     <div className="min-h-screen flex items-center justify-center">  
       <div className="bg-custom-pink pt-6 pl-8 pr-8 pb-10 rounded-custom-border-radius shadow-md w-full sm:w-96">
         <h2 className="text-2xl text-custom-green font-bold mb-8 ">Register</h2>
