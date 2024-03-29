@@ -46,16 +46,16 @@ const DisplayTasksPage = () => {
 
   const handleStatus = async (id) => {
     try {
-      await dispatch(updateStatus(id, token)); // Wait for the status update to complete
-      setStatus((prevStatus) => !prevStatus); // Update status state to trigger useEffect
+      await dispatch(updateStatus(id, token)); 
+      setStatus((prevStatus) => !prevStatus); 
     } catch (error) {
       console.error("Error updating status:", error);
     }
   };
 
   useEffect(() => {
-    dispatch(getTasks(token)); // Fetch tasks data whenever status is updated
-  }, [status]); // Trigger useEffect when status state changes
+    dispatch(getTasks(token)); 
+  }, [status]); 
 
   if (isLoading) {
     return (
@@ -91,7 +91,7 @@ const DisplayTasksPage = () => {
             alt="No Data"
             className="w-96 h-auto relative"
           />
-          {/* Adjusted width */}
+         
           <h1 className="text-xl font-semibold text-custom-darkpink mt-4">
             Add Some Tasks
           </h1>
@@ -145,7 +145,7 @@ const DisplayTasksPage = () => {
                   task.status ? "text-custom-green" : "text-custom-red"
                 }`}
                 style={{ marginRight: "10px" }}
-                checked={task.status} // Automatically checked if status is true
+                checked={task.status}
                 onChange={() => handleStatus(task._id)}
               />
             </div>
