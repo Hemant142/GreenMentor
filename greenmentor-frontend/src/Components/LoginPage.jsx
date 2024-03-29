@@ -17,8 +17,10 @@ const LoginPage = () => {
       password,
     };
     if (user && password) {
+      alert("Server is Slow Please Wait !!!");
       dispatch(login(user)).then((res) => {
         console.log(res, "login");
+       
         if (res.message === "Login successful!") {
           alert(res.message);
           navigate("/tasks");

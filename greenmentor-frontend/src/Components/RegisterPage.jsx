@@ -19,6 +19,7 @@ const RegisterPage = () => {
         }
        
         if(name && username && email && password){
+          alert("Server is Slow Please Wait !!!");
             dispatch(register(user)).then((res)=>{
               console.log(res,"register")
                 if(res.message==="User created successfully!"){
