@@ -6,7 +6,7 @@ Empower your productivity with our intuitive task management app, facilitating s
  [Live](https://greenmentor-frontend-one.vercel.app/)
 
 # Backend Deployed Link
- [Live](https://greenmentor-backend-ne67.onrender.com/)
+ [Live](https://cute-plum-swallow.cyclic.app)
 
  # Video Link
  [Video](https://drive.google.com/file/d/1m9s2DXBZnjkDcVT1xOOh1593vzX7fHdz/view?usp=sharing)
