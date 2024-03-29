@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Edit_Profile, Login_Failure, Login_Request, Login_Success, Logout_Success } from "../actionTypes";
 
-const baseURL = "https://greenmentor-backend-ne67.onrender.com";
+const baseURL = "https://cute-plum-swallow.cyclic.app";
 
 //Login
 export const login = (user)=> async (dispatch) => {
