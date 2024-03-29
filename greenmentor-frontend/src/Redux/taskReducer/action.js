@@ -48,6 +48,19 @@ export const getSingleTasks = (token, id) => async (dispatch) => {
   }
 };
 
+export const updateStatus=(id,token)=>async(dispatch)=>{
+  // console.log(id, "igbuy");
+  const res=await axios.patch(`${baseURL}/tasks/update/status/${id}`, {
+    headers: {
+      'Authorization': token
+    }
+  })
+  console.log(res.data,"updates status")
+      // dispatch({type:Edit_Task,payload:res.data})
+      
+
+      // return res?.data
+}
 
 export const adaddTask = (task,token)=>async(dispatch)=>{
     try{
