@@ -11,8 +11,8 @@ const DisplayTasksPage = () => {
   const tasks = useSelector((store) => store.taskReducer.tasks) || [];
   const isLoading = useSelector((store) => store.taskReducer.isLoading);
   const isError = useSelector((store) => store.taskReducer.isError);
+  const [status, setStatus] = useState(false);
 
-  console.log("DisplayTaskPage");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isUpdate, setIsUpdate] = useState(false);
   const [id, setId] = useState("");
@@ -44,14 +44,18 @@ const DisplayTasksPage = () => {
     }
   };
 
-  const handleStatus = (id) => {
-   
-    dispatch(updateStatus(id, token))
+  const handleStatus = async (id) => {
+    try {
+      await dispatch(updateStatus(id, token)); // Wait for the status update to complete
+      setStatus((prevStatus) => !prevStatus); // Update status state to trigger useEffect
+    } catch (error) {
+      console.error("Error updating status:", error);
+    }
   };
 
   useEffect(() => {
-    dispatch(getTasks(token));
-  }, []);
+    dispatch(getTasks(token)); // Fetch tasks data whenever status is updated
+  }, [status]); // Trigger useEffect when status state changes
 
   if (isLoading) {
     return (
@@ -135,7 +139,7 @@ const DisplayTasksPage = () => {
               </div>
             </div>
             <div>
-              {/* <input
+              <input
                 type="checkbox"
                 className={`h-6 w-6 cursor-pointer ${
                   task.status ? "text-custom-green" : "text-custom-red"
@@ -143,7 +147,7 @@ const DisplayTasksPage = () => {
                 style={{ marginRight: "10px" }}
                 checked={task.status} // Automatically checked if status is true
                 onChange={() => handleStatus(task._id)}
-              /> */}
+              />
             </div>
           </div>
         ))
